@@ -1,13 +1,19 @@
 const inquirer = require('inquirer');
 const db = require('./db/connection');
-const {viewDepartment, viewRoles, viewEmployee} = require('./lib/queries');
+const {
+    viewDepartment,
+    viewRoles,
+    viewEmployee,
+    addDepartment,
+    addRole
+} = require('./lib/prompts');
 
 
 console.log('---------------------------------');
 console.log('|Content Management Systems(CMS) |');
 console.log('---------------------------------');
 
-function init (){
+function init() {
     mainPrompts();
 }
 //  A prompt showcasing a list of different options.
@@ -52,7 +58,6 @@ function mainPrompts() {
 }
 
 // Start the original prompt listings.
-
 init();
 // Start DB connection
 db.connect(err => {
