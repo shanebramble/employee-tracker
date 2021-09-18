@@ -5,15 +5,16 @@ const {
     viewRoles,
     viewEmployee,
     addDepartment,
-    addRole
+    addRole,
+    addEmployee
 } = require('./lib/prompts');
 
-
-console.log('---------------------------------');
-console.log('|Content Management Systems(CMS) |');
-console.log('---------------------------------');
-
+// Initialize the beginning prompts.
 function init() {
+    console.log('---------------------------------');
+    console.log('|Content Management Systems(CMS) |');
+    console.log('---------------------------------');
+
     mainPrompts();
 }
 //  A prompt showcasing a list of different options.
@@ -59,8 +60,9 @@ function mainPrompts() {
 
 // Start the original prompt listings.
 init();
+
 // Start DB connection
 db.connect(err => {
     if (err) throw err;
-    console.log('Database connected.');
+    console.log('\nDatabase connected.');
 });
