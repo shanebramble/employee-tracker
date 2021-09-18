@@ -6,7 +6,9 @@ const {
     viewEmployee,
     addDepartment,
     addRole,
-    addEmployee
+    addEmployee,
+    updateEmployeeRole,
+    Quit
 } = require('./lib/prompts');
 
 // Initialize the beginning prompts.
