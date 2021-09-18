@@ -12,7 +12,7 @@ class DB {
         return this.connection.promise().query(`SELECT * FROM role`);
     }
     viewAllEmployees() {
-        return this.connection.promise().query(`SELECT * FROM employee`);
+        return this.connection.promise().query(`SELECT employee.id, employee.first_name, employee.last_name, role.title, role.salary FROM employee LEFT JOIN role ON employee.role_id = role.id`);
     }
     addNewDepartment(department){
         return this.connection.promise().query(`INSERT INTO department (name) VALUE ("${department}")`);
