@@ -14,9 +14,21 @@ class DB {
     viewAllEmployees() {
         return this.connection.promise().query(`SELECT * FROM employee`);
     }
-    addNewDepartment(newDepartment){
-        return this.connection.promise().query('INSERT INTO department SET ?', newDepartment);
+    addNewDepartment(department){
+        return this.connection.promise().query(`INSERT INTO department (name) VALUE ("${department}")`);
     }
+    
+    addNewRole(role){
+        return this.connection.promise().query(`INSERT INTO role (title, salary, department_id) VALUE ("${role.title}", "${role.salary}", "${role.all_departments}" )`);
+    }
+    
+    addNewEmployee(employee){
+        return this.connection.promise().query(`INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ()`);
+    }
+    /*
+    updateCurrentEmployee(){
+
+    }*/
 }
 
 
