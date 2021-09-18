@@ -31,6 +31,10 @@ npm install
 npm start
 ```
 
+### Recorded Demonstration
+
+[Employee Tracker Video Demo](https://drive.google.com/file/d/1tNqCSDMTCMPbm8UyALrCdeRg8UWEGwGS/view?usp=sharing)
+
 ### Built With
 
 - JavaScipt
